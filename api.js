@@ -353,7 +353,7 @@ function getMaxZoom(latlgt) {
 }
 
 function isCountryWithoutAlcohol() {
-    var req_url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + pos.lat + "," + pos.lng + "&key=AIzaSyAyfNEYMmECQLIBpa97FVwiQH0Q9ayqK0Y&location_type=APPROXIMATE&result_type=administrative_area_level_1";
+    var req_url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + pos.lat + "," + pos.lng + "&key=****maps_api_key****&location_type=APPROXIMATE&result_type=administrative_area_level_1";
     var country;
     jQuery.ajax({
         url: req_url,
