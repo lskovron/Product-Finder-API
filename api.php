@@ -41,4 +41,4 @@
 </section>
 
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/api.js"></script>
-<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAW_2EV8BO3h79gSSxgT9ipk2PbqDNDb7o&callback=initMap&language=en&ver=4.5.15'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=******google_maps_api_kep********&callback=initMap&language=en&ver=4.5.15'></script>
