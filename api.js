@@ -279,30 +279,30 @@ function make_query_product(nresult, radi) {
 
 function print_Results(array, elem, nresult) {
     console.log('print results');
-    ultimo = false;
-    freno = 0;
+    last = false;
+    break = 0;
     locId = 0;
-    var pagina = 1;
+    var page = 1;
     if (array.length > 0) {
-        while (!ultimo) {
-            elem.prepend("<div class=\"col-sm-12 res-page" + pagina + "\" dta-page=\"" + pagina + "\"></div>");
-            for (var i = freno;
-                (i < freno + nresult) && !ultimo; i++) {
-                jQuery(".res-page" + pagina).append('<div class="info-result" data-lng="' + array[i].longitude + '" data-lat="' + array[i].latitude + '" data-id="' + locId + '" >\
+        while (!last) {
+            elem.prepend("<div class=\"col-sm-12 res-page" + page + "\" dta-page=\"" + page + "\"></div>");
+            for (var i = break;
+                (i < break + nresult) && !last; i++) {
+                jQuery(".res-page" + page).append('<div class="info-result" data-lng="' + array[i].longitude + '" data-lat="' + array[i].latitude + '" data-id="' + locId + '" >\
               <p class=\"info-rtitle\">' + array[i].name + '</p>\
               <p class=\"info-rubication\">' + array[i].address + '</p>\
               <p class=\"info-state\">' + array[i].city + ', ' + array[i].state  + ', ' + array[i].zip_code + '</p></div>');
                 if (i >= (array.length - 1)) {
-                    ultimo = true;
+                    last = true;
                     // jQuery(".dir-cont").show("slow");
                     resul_lenght = i + 1;
-                    display_page(1, pagina);
+                    display_page(1, page);
                 }
                 locId++;
             }
-            freno += nresult;
-            if (!ultimo) {
-                pagina++;
+            break += nresult;
+            if (!last) {
+                page++;
             }
         }
         var ds = jQuery("div.res-page" + pag_now).children().length;
