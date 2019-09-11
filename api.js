@@ -280,14 +280,14 @@ function make_query_product(nresult, radi) {
 function print_Results(array, elem, nresult) {
     console.log('print results');
     last = false;
-    break = 0;
+    brake = 0;
     locId = 0;
     var page = 1;
     if (array.length > 0) {
         while (!last) {
             elem.prepend("<div class=\"col-sm-12 res-page" + page + "\" dta-page=\"" + page + "\"></div>");
-            for (var i = break;
-                (i < break + nresult) && !last; i++) {
+            for (var i = brake;
+                (i < brake + nresult) && !last; i++) {
                 jQuery(".res-page" + page).append('<div class="info-result" data-lng="' + array[i].longitude + '" data-lat="' + array[i].latitude + '" data-id="' + locId + '" >\
               <p class=\"info-rtitle\">' + array[i].name + '</p>\
               <p class=\"info-rubication\">' + array[i].address + '</p>\
@@ -300,7 +300,7 @@ function print_Results(array, elem, nresult) {
                 }
                 locId++;
             }
-            break += nresult;
+            brake += nresult;
             if (!last) {
                 page++;
             }
